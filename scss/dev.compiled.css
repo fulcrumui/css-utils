@@ -1104,6 +1104,11 @@
   padding-right: 50px;
 }
 
+.u-spacer-0.u-spacer-0 {
+  clear: both;
+  height: 0px;
+}
+
 .u-spacer-5.u-spacer-5 {
   clear: both;
   height: 5px;
@@ -1155,15 +1160,15 @@
 }
 
 .u-text-right.u-text-right {
-  text-align: "right";
+  text-align: right;
 }
 
 .u-text-left.u-text-left {
-  text-align: "left";
+  text-align: left;
 }
 
 .u-text-center.u-text-center {
-  text-align: "center";
+  text-align: center;
 }
 
 .u-full-width {
@@ -1323,23 +1328,23 @@
 }
 
 .u-text-transform-none.u-text-transform-none {
-  text-transform: "none";
+  text-transform: none;
 }
 
 .u-text-transform-capitalize.u-text-transform-capitalize {
-  text-transform: "capitalize";
+  text-transform: capitalize;
 }
 
 .u-text-transform-uppercase.u-text-transform-uppercase {
-  text-transform: "uppercase";
+  text-transform: uppercase;
 }
 
 .u-text-transform-lowercase.u-text-transform-lowercase {
-  text-transform: "lowercase";
+  text-transform: lowercase;
 }
 
 .u-text-transform-full-width.u-text-transform-full-width {
-  text-transform: "full-width";
+  text-transform: full-width;
 }
 
 .u-padding-top-small.u-padding-top-small {
