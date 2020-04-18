@@ -10,13 +10,13 @@
 @mixin padding(
   $_start: map.get(CONFIG.$PADDING_INTERNAL, 'start'),
   $_end: map.get(CONFIG.$PADDING_INTERNAL, 'end'),
-  $_multiplier: map.get(CONFIG.$PADDING_INTERNAL, 'multiplier'),
+  $_multiplier: map.get(CONFIG.$PADDING_INTERNAL, 'incrementBy'),
 ) {
   $_positions: (
-    top,
-    bottom,
-    left,
-    right,
+    'top',
+    'bottom',
+    'left',
+    'right',
   );
   @if ($_start == 0) {
     .u-padding-0 {
@@ -27,37 +27,38 @@
     }
   }
   @each $position in $_positions {
+    $value: $_start;
     @for $i from $_start through $_end {
-      $value: $i * $_multiplier;
-      .u-padding-#{$position}-#{$value} {
-        &#{&} {
-          padding-#{$position}: #{$value}px;
-        }
-      }
-      @if ($position == 'top') {
-        .u-padding-block-#{$value} {
+      @if ($value < $_end) {
+        $value: if($i == $_start, $value, $value + $_multiplier);
+        .u-padding-#{$position}-#{$value} {
           &#{&} {
-            padding-block: #{$value}px;
-            padding-top: #{$value}px;
-            padding-bottom: #{$value}px;
+            padding-#{$position}: #{$value}px;
           }
         }
-      } @else if ($position == 'left') {
-        .u-padding-inline-#{$value} {
-          &#{&} {
-            padding-inline: #{$value}px;
-            padding-left: #{$value}px;
-            padding-right: #{$value}px;
+        @if ($position == 'top') {
+          .u-padding-block-#{$value} {
+            &#{&} {
+              padding-block: #{$value}px;
+              padding-top: #{$value}px;
+              padding-bottom: #{$value}px;
+            }
           }
-        }
-        .u-padding-all-#{$value} {
-          &#{&} {
-            padding: #{$value}px;
+        } @else if ($position == 'left') {
+          .u-padding-inline-#{$value} {
+            &#{&} {
+              padding-inline: #{$value}px;
+              padding-left: #{$value}px;
+              padding-right: #{$value}px;
+            }
+          }
+          .u-padding-all-#{$value} {
+            &#{&} {
+              padding: #{$value}px;
+            }
           }
         }
       }
     }
   }
 }
-
-@include padding();

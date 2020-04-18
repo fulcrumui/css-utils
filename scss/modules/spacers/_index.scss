@@ -10,16 +10,19 @@
 @mixin spacers(
   $start: map.get(CONFIG.$SPACERS_INTERNAL, 'start'),
   $end: map.get(CONFIG.$SPACERS_INTERNAL, 'end'),
-  $multiplier: map.get(CONFIG.$SPACERS_INTERNAL, 'multiplier'),
+  $multiplier: map.get(CONFIG.$SPACERS_INTERNAL, 'incrementBy'),
   $other: null,
 ) {
   @if ($other == null or $other == '') {
+    $value: $start;
     @for $i from $start through $end {
-      $value: $i * $multiplier;
-      .u-spacer-#{$value} {
-        &#{&} {
-          clear: both;
-          height: #{$value}px;
+      @if ($value < $end) {
+        $value: if($i == $start, $value, $value + $multiplier);
+        .u-spacer-#{$value} {
+          &#{&} {
+            clear: both;
+            height: #{$value}px;
+          }
         }
       }
     }

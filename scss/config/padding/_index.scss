@@ -4,8 +4,8 @@ $PADDING: () !default;
 
 $PADDING_DEFAULT: (
   'start': 0,
-  'end': 10,
-  'multiplier': 5,
+  'end': 50,
+  'incrementBy': 5,
 );
 
 $PADDING_INTERNAL: map.merge($PADDING_DEFAULT, $PADDING);

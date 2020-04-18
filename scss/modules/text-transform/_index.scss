@@ -9,7 +9,7 @@
   @each $transform in $transforms {
     .u-text-transform-#{$transform} {
       &#{&} {
-        text-transform: $transform;
+        text-transform: #{$transform};
       }
     }
   }

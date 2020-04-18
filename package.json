@@ -1,6 +1,6 @@
 {
   "name": "@fulcrumui/css-utils",
-  "version": "1.0.0-beta0",
+  "version": "1.0.0-beta1",
   "description": "A CSS utility set used to easily adjust shared/common styles on UI components by adding some simple markup",
   "main": "fulcrum.min.css",
   "scripts": {
@@ -21,10 +21,14 @@
   ],
   "author": "Ryan Wood",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fulcrumui/css-utils"
+  },
   "devDependencies": {
-    "husky": "^3.0.5",
-    "sass": "^1.25.0",
-    "stylelint": "^10.1.0"
+    "husky": "^4.2.5",
+    "sass": "^1.26.3",
+    "stylelint": "^13.3.2"
   },
   "husky": {
     "hooks": {
@@ -32,6 +36,6 @@
     }
   },
   "dependencies": {
-    "chalk": "^2.4.2"
+    "chalk": "^4.0.0"
   }
 }

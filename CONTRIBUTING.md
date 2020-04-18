@@ -1,4 +1,6 @@
-# If you would like to contribute to FulcrumCSS please see the rules for contributing below
+# We are not currenlty accepting contributions while we outline the contribution process. Please check back to see how you can help **fulcrumui** grow
+
+<!-- # If you would like to contribute to FulcrumCSS please see the rules for contributing below
 
 ## Branching
 When starting a new task, always branch off of the latest version of the **develop** branch!
@@ -47,5 +49,5 @@ Give as much information as needed about what was added/changed for this PR.
 
 If your PR is declined there will be a reason why added to the discussion portion of the PR.
 
-If accepted, your changes will be merged into develop, issue closed, and will be included in the next release of FulcrumCSS.
+If accepted, your changes will be merged into develop, issue closed, and will be included in the next release of FulcrumCSS. -->
 
