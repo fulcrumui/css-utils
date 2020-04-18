@@ -10,7 +10,7 @@
 @mixin margins(
   $start: map.get(CONFIG.$MARGINS_INTERNAL, 'start'),
   $end: map.get(CONFIG.$MARGINS_INTERNAL, 'end'),
-  $multiplier: map.get(CONFIG.$MARGINS_INTERNAL, 'incrimentBy'),
+  $multiplier: map.get(CONFIG.$MARGINS_INTERNAL, 'incrementBy'),
 ) {
   $_positions: (
     'top',
