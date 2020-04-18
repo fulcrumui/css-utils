@@ -1,81 +1,128 @@
-# FulcrumCSS
+# CSS Utilities
 
-FulcrumCSS is a CSS utility library that allows you to *leverage* commonly used CSS to apply simple styles and position to elements by simply adding markup. By using FulcrumCSS you can focus on writing verbose, clean markup, while reducing CSS redundancies caused by commonly used styles. FulcrumCSS uses single class rules that only ever carry a specificity of 20, which makes this ideal to use alongside BEM methodology to increase development efficiency and decrease development time. FulcrumCSS is lighweight and modular. You can either import the whole library, or you can simply import what you need. FulcrumCSS leverages the power of SCSS mixins, which also allows for customization of certain utility classes.
+**We are diligently working to get the documentation for fulcrumui CSS Utilities completed. Until then, please see some examples below.**
+
+fulcrumui CSS utilities is a library that allows you to *leverage* commonly used CSS to apply simple styles and position to elements by simply adding markup. By using fulcrumui CSS Utilities you can focus on writing verbose, clean markup, while reducing CSS redundancies caused by commonly used styles. The fulcrumui CSS Utilities uses single class rules that only ever carry a specificity of 020, which makes this ideal to use alongside BEM methodology to increase development efficiency and decrease development time.
+
+The fulcrumui CSS Utilities are lighweight and modular. You can either import the whole library, or you can simply import what you need. fulcrumui CSS Utilities leverages the power of Dart Sass, and aims to be fully configurable. We are constantly adding new features to fulcrumui. If there is a feature you are looking for but is not listed in the roadmap, feel free to let us know what you would like to see added!
 
 ## Installing Fulcrum
 
-To install Fulcrum, all you need to do is
+To install fulcrumui, all you need to do is
 
 ```cmd
-npm i fulcrum-css
+npm i @fulcrumui/css-utils
 ```
-
-
-
 
 ## Using Fulcrum
 
-In a project without Fulcrum, say you have some elements that has some display styles (color, background, etc) tied to a class name
+There are a few ways that you can utilize the fulcrumui CSS utilities in your application.
 
-```html
-<div class="item">
-  <div class="item__element">
-    ...
-  </div>
-</div>
-<div class="item">
-  <div class="item__element">
-    ...
-  </div>
-</div>
+### **Option 1: Everything but the kitchen sink**
 
-```
+With this option you are able to leverage the full power of fulcrumui's CSS utilities! To use this method you would simply include the perbuild minified stylesheet:
 
 ```scss
-.item {
-  &__element {
-    color: blue;
-    background: orange;
-  }
-}
+// for projects using Dart Sass
+
+@use '<path-to-node_modules>/@fulcrumui/css-utils/dist/fulcrum.min.css';
+
+// for projects still using node-sass (or other sass implementation) or Vanilla CSS
+
+@import '<path-to-node_modules>/@fulcrumui/css-utils/dist/fulcrum.min.css';
 ```
 
-Now you want to add some margin to *one* of the elements to put some space between them. You can either add another class, write a disclusion rule with `:not()`, or an inclusion rule with `:first-child | :last-child`.
+Once you have included the minified CSS utils stylesheet in your project, you can begin to leverage the entire fulcrumui CSS utils library and all of it's modules.
 
-**-OR-**
+This is by far the easiest way to include fulcrumui in your development. If you need more granular control, or if you would like to only use a few modules see the other options below.
 
-You could use Fulcrum to leverage commonly used CSS to do this task for you! Fulcrum keeps CSS bloat to a minimum, while helping make your markup more readable and verbose. When you look at an element with Fulcrum classes, you will be able to tell what exactly is being applied from the Fulcrum Library. From the example above, lets add 25px of bottom margin to the first element:
+### **Option 2: Modular (no config)**
+
+_**NOTE:** This implementation requires you to be using Dart Sass in your development!_
+
+```scss
+@use '<path-to-node_modules>/@fulcrumui/css-utils/scss/modules/<module-name>';
+```
+
+You can now begin to use the included fulcrumui CSS Utility module in your development.
+
+_**NOTE:** The modules path should not include the underscore or file extension!_
+
+```scss
+// DO
+
+@use '<path-to-node_modules>/@fulcrumui/css-utils/scss/modules/margin';
+
+// DON'T
+
+@use '<path-to-node_modules>/@fulcrumui/css-utils/scss/modules/margin/_index.scss';
+```
+
+### **Option 3: Everything but the kitchen sink (with config)**
+
+_**NOTE:** This implementation requires you to be using Dart Sass in your development!_
+
+```scss
+@use '<path-to-node_modules>/@fulcrumui/css-utils/fulcrum.scss' with (
+  // config values here!
+);
+```
+
+You can now use all of the fulcrumui CSS Utilities with the configuration values that you have provided! You also do not need to include configurations for each utility, as they are set up with default values. So if you want to customize the config values for 1 module, go for it. If you want to change the config values for all of the modules, you can do that too. It's entirely up to you!
+
+### **Option 4: Modular (with config)**
+
+_**NOTE:** This implementation requires you to be using Dart Sass in your development!_
+
+```scss
+@use '<path-to-node_modules>/@fulcrumui/css-utils/config' with (
+  // config values here for the margin module!
+);
+@use '<path-to-node_modules>/@fulcrumui/css-utils/modules/margin';
+// any other modules that you would like to use
+
+// Then be sure to include the module you would want to use
+
+@include margin.margins;
+```
+
+You can now use the fulcrumui CSS Utility you've included with the configuration values that you have provided! You only need to add the configuration **once**. It is also important to note that you **need to include the configuration before you include any of the fulcrumui CSS Utility modules**.
+
+**Larger example below:**
+
+```scss
+@use './config' with (
+  $MARGINS: (
+    'start': 10,
+    'end': 30,
+    'multiplier': 5,
+  ),
+  $PADDING: (
+    'start': 10,
+    'end': 60,
+    'incrementBy': 2,
+  ),
+  $SPACERS: (
+    'start': 15,
+    'end': 60,
+    'incrementBy': 15,
+  ),
+);
+@use './modules/margin';
+@use './modules/padding';
+@use './modules/spacers';
+
+@include margin.margins; // will now have all margin rules from 10-30 incremented by 5 (10, 15, 20...30)
+@include padding.padding; // will now have all padding rules from 10-60 incremented by 2 (10, 12, 14...60)
+@include spacers.spacers; // will now have all spacers from 15-60 incremented by 15 (15, 30, 45, 60);
+```
+
+You can now use these utility classes on elements like so:
 
 ```html
-<div class="item u-margin-bottom-25"> <!-- Notice the Fulcrum class added here -->
-  <div class="item__element">
-    ...
-  </div>
-</div>
-<div class="item">
-  <div class="item__element">
-    ...
-  </div>
-</div>
+<!-- This will apply 10px of block & inline margining to the element -->
+<section class="example-element u-margin-all-10"></section>
 ```
 
-With the addition of the Fulcrum Utility class, it will add the desired margin-bottom with a specificity of 20. This ensures that Fulcrum is able to add the CSS you need without using `!important` flags\* for every rule. Fulcrum also uses the `u-` namespace to avoid collision with rules that may be in place when dealing with legacy sites and/or applications.
-
-<small>* <code>!important</code> flags are used for certain margin & padding classes. Please see the docs for more information</small>
-
-This example is just a small portion of what you can do with Fulcrum. With Fulcrum, you have one centralized location for all of your positioning CSS which means you don't have to add class names or duplicate CSS just to bump an element around the page. Fulcrum also contains utility classes for commonly used display rules. For example, say you wanted those parent elements to have a little bit of box shadow to provide some depth:
-
-```html
-<div class="item u-margin-bottom-25 u-elevation-1">
-  <div class="item__element">
-    ...
-  </div>
-</div>
-<div class="item u-elevation-1">
-  <div class="item__element">
-    ...
-  </div>
-</div>
-```
-
-You can see in the above example, that adding a slight box shadow is as easy as adding a class name to your parent element. Now at a glance, your markup tells you that they both have some box shadow, and the first item has some bottom margin. Fulcrum does all of this while keeping the specificity of the selectors at 20, and reusing code from the global scope to keep your CSS DRY and reduce loading cost.
+## **Important!!!**
+To ensure that fulcrumui CSS Utilities are able to override any styles that you have defined elsewhere, make sure that your `@use` statements referencing fuclrumui are placed last in your `@use` group!

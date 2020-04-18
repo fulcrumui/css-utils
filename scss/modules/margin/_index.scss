@@ -10,7 +10,7 @@
 @mixin margins(
   $start: map.get(CONFIG.$MARGINS_INTERNAL, 'start'),
   $end: map.get(CONFIG.$MARGINS_INTERNAL, 'end'),
-  $multiplier: map.get(CONFIG.$MARGINS_INTERNAL, 'multiplier'),
+  $multiplier: map.get(CONFIG.$MARGINS_INTERNAL, 'incrimentBy'),
 ) {
   $_positions: (
     'top',
@@ -27,37 +27,38 @@
     }
   }
   @each $position in $_positions {
+    $value: $start;
     @for $i from $start through $end {
-      $value: $i * $multiplier;
-      .u-margin-#{$position}-#{$value} {
-        &#{&} {
-          margin-#{$position}: #{$value}px;
-        }
-      }
-      @if ($position == 'top') {
-        .u-margin-block-#{$value} {
+      @if ($value < $end) {
+        $value: if($i == $start, $value, $value + $multiplier);
+        .u-margin-#{$position}-#{$value} {
           &#{&} {
-            margin-block: #{$value}px;
-            margin-top: #{$value}px;
-            margin-bottom: #{$value}px;
+            margin-#{$position}: #{$value}px;
           }
         }
-      } @else if ($position == 'left') {
-        .u-margin-inline-#{$value} {
-          &#{&} {
-            margin-inline: #{$value}px;
-            margin-left: #{$value}px;
-            margin-right: #{$value}px;
+        @if ($position == 'top') {
+          .u-margin-block-#{$value} {
+            &#{&} {
+              margin-block: #{$value}px;
+              margin-top: #{$value}px;
+              margin-bottom: #{$value}px;
+            }
           }
-        }
-        .u-margin-all-#{$value} {
-          &#{&} {
-            margin: #{$value}px;
+        } @else if ($position == 'left') {
+          .u-margin-inline-#{$value} {
+            &#{&} {
+              margin-inline: #{$value}px;
+              margin-left: #{$value}px;
+              margin-right: #{$value}px;
+            }
+          }
+          .u-margin-all-#{$value} {
+            &#{&} {
+              margin: #{$value}px;
+            }
           }
         }
       }
     }
   }
 }
-
-@include margins();
