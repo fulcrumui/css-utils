@@ -26,9 +26,9 @@
     "url": "https://github.com/fulcrumui/css-utils"
   },
   "devDependencies": {
-    "husky": "^3.0.5",
-    "sass": "^1.25.0",
-    "stylelint": "^10.1.0"
+    "husky": "^4.2.5",
+    "sass": "^1.26.3",
+    "stylelint": "^13.3.2"
   },
   "husky": {
     "hooks": {
@@ -36,6 +36,6 @@
     }
   },
   "dependencies": {
-    "chalk": "^2.4.2"
+    "chalk": "^4.0.0"
   }
 }
