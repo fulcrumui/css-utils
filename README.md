@@ -10,7 +10,9 @@ The fulcrumui CSS Utilities are lighweight and modular. You can either import th
 
 To install fulcrumui, all you need to do is
 
-```cmd
+```bash
+yarn add @fulcrumui/css-utils
+# or
 npm i @fulcrumui/css-utils
 ```
 
@@ -20,7 +22,7 @@ There are a few ways that you can utilize the fulcrumui CSS utilities in your ap
 
 ### **Option 1: Everything but the kitchen sink**
 
-With this option you are able to leverage the full power of fulcrumui's CSS utilities! To use this method you would simply include the perbuild minified stylesheet:
+With this option you are able to leverage the full power of fulcrumui's CSS utilities! To use this method you would simply include the perbuilt minified stylesheet:
 
 ```scss
 // for projects using Dart Sass
