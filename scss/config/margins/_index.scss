@@ -5,7 +5,7 @@ $MARGINS: () !default;
 $MARGINS_DEFAULT: (
   'start': 0,
   'end': 50,
-  'incrimentBy': 5,
+  'incrementBy': 5,
 );
 
 $MARGINS_INTERNAL: map.merge($MARGINS_DEFAULT, $MARGINS);
