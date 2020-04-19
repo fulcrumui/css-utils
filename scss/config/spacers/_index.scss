@@ -3,9 +3,9 @@
 $SPACERS: () !default;
 
 $SPACERS_DEFAULT: (
-  'start': 1,
-  'end': 10,
-  'multiplier': 5,
+  'start': 0,
+  'end': 50,
+  'incrementBy': 5,
 );
 
 $SPACERS_INTERNAL: map.merge($SPACERS_DEFAULT, $SPACERS);
