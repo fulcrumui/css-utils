@@ -36,4 +36,4 @@ You can now use these utility classes on elements like so:
 
 > **Important!!!**
 >
-> To ensure that fulcrumui CSS Utilities are able to override any styles that you have defined elsewhere, make sure that your `@use`  statements referencing fuclrumui are placed last in your `@use` group!
+> To ensure that Fulcrum UI CSS Utilities are able to override any styles that you have defined elsewhere, make sure that your `@use`  statements referencing fuclrumui are placed last in your `@use` group!
