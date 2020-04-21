@@ -2,6 +2,8 @@
   * For IE 10 & 11
 */
 
+// TODO: Edit this to have more than just IE detection
+
 @mixin ie10plus {
   @media all and (-ms-high-contrast: none),
     (-ms-high-contrast: active) {

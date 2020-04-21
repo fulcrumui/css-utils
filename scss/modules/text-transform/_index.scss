@@ -4,6 +4,7 @@
     'capitalize',
     'uppercase',
     'lowercase',
+    // remove full width
     'full-width',
   );
   @each $transform in $transforms {
