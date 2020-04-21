@@ -7,9 +7,6 @@
 @use './modules/element-floats' as floats;
 @use './modules/elevation' as elevation;
 @use './modules/font-weight' as font;
-@use './modules/margin' as margin;
-@use './modules/padding' as padding;
-@use './modules/spacers' as spacers;
 @use './modules/text-alignment' as textAlignment;
 @use './modules/full-width' as fullWidth;
 @use './modules/align-self' as alignSelf;
@@ -17,6 +14,11 @@
 @use './modules/font-size' as fontSize;
 @use './modules/text-transform' as textTransform;
 @use './modules/keyword-sizes' as keywordSizes;
+// TODO: Remove the modules below in favor of keywords
+
+@use './modules/margin' as margin;
+@use './modules/padding' as padding;
+@use './modules/spacers' as spacers;
 
 @include floats.floatElement;
 @include elevation.elevation;
