@@ -1,0 +1,21 @@
+@function contrast ($hex) {
+  $color: 0;
+  $red: red($hex);
+  $green: green($hex);
+  $blue: blue($hex);
+  $threshold: 0.5;
+  $borderThreshold: 0.8;
+
+  $background: rgb($red, $green, $blue);
+
+  $r: $red * 0.2126;
+  $g: $green * 0.7152;
+  $b: $blue * 0.0722;
+
+  $sum: $r + $g + $b;
+
+  $percievedLightness: $sum / 255;
+
+  $color: hsl(0, 0%, (($percievedLightness - $threshold) * -10000000%));
+  @return $color;
+}
