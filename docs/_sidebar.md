@@ -22,11 +22,11 @@
   - [Font Weight](font-weight.md)
   - [Full Width](full-width.md)
   - [Grid Layout](grid-layout.md)
-  - [Heading Size](heading-size.md)
+  <!-- - [Heading Size](heading-size.md) -->
   - [Keyword Sizes](keyword-sizes.md)
   - [Margin](margin.md)
   - [Padding](padding.md)
-  - [Rem Calculation](rem-calculation.md)
+  <!-- - [Rem Calculation](rem-calculation.md) -->
   - [Spacers](spacers.md)
   - [Text Alignment](text-alignment.md)
   - [Text Transform](text-transform.md)
