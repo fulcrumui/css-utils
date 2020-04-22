@@ -38,6 +38,6 @@ To apply this utility, use the pattern below:
 | `tablet` | Applies your tablet brekpoint <br /> **Default: `775px`** |
 | `desktop` | Applies your desktop brekpoint <br /> **Default: `993px`** |
 
-## Configurable ✅
+## Configurable 🔜
 
-[See how to configure the `$BREAKPOINTS` property](breakpoints-configuration.md)
+<!-- [See how to configure the `$BREAKPOINTS` property](breakpoints-configuration.md) -->

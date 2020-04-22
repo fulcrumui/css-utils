@@ -1,4 +1,4 @@
-# We are not currenlty accepting contributions while we outline the contribution process. Please check back to see how you can help **fulcrumui** grow
+# We are not currenlty accepting contributions while we outline the contribution process. Please check back to see how you can help **Fulcrum UI** grow
 
 <!-- # If you would like to contribute to FulcrumCSS please see the rules for contributing below
 

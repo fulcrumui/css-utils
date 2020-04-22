@@ -1,1 +1,1 @@
-> TODO: Write documentation for **breakpoint configurations**
+> _EXPERIMENTAL!!!:_ **We are still working on the configuration allowance for the `$BREAKPOINTS` property. While it can be edited, it should be considered experimental and may produce undesired results**
