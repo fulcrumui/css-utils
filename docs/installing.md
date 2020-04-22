@@ -1,6 +1,6 @@
-# Installing fulcrumui CSS Utilities
+# Installing Fulcrum UI CSS Utilities
 
-It's simple to install fulcrumui CSS Utilities library through yarn (or npm)!
+It's simple to install Fulcrum UI CSS Utilities library through yarn (or npm)!
 
 ```bash
 yarn add @fulcrumui/css-utils

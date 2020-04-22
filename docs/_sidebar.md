@@ -1,10 +1,10 @@
-- About fulcrumui CSS Utilities
-  - [What are fulcrumui CSS Utilities?](/README.md)
-  - [Why Use fulcrumui CSS Utilities?](why-use.md)
+- About Fulcrum UI CSS Utilities
+  - [What are Fulcrum UI CSS Utilities?](/README.md)
+  - [Why Use Fulcrum UI CSS Utilities?](why-use.md)
 
 - Getting Started
-  - [Installing fulcrumui CSS Utilities](installing.md)
-  - [Adding fulcrumui CSS Utilities to your project](adding-to-projects.md)
+  - [Installing Fulcrum UI CSS Utilities](installing.md)
+  - [Adding Fulcrum UI CSS Utilities to your project](adding-to-projects.md)
     - [Option 1: Everything but the Kitchen Sink](adding-to-projects.md#option-1-everything-but-the-kitchen-sink)
     - [Option 2: Modular (no config)](adding-to-projects.md#option-2-modular-no-config)
     - [Option 3: Everything but the Kitchen Sink (with config)](adding-to-projects.md#option-3-everything-but-the-kitchen-sink-with-config)
@@ -34,9 +34,9 @@
 
 - Configurations
   - [How to configure your fulcrum UI CSS utilities](configuring.md)
-  - [Configurable Modules](configurable-modules.md)
+  - Configurable Modules
     - [Font Size](font-size-configuration.md)
-    - [Layout Grid](layout-grid-configuration.md)
+    - [Grid Layout](layout-grid-configuration.md)
     - [Breakpoints](breakpoints-configuration.md)
     - [Margin](margin-configuration.md)
     - [Padding](padding-configuration.md)
