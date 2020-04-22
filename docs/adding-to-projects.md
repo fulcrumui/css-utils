@@ -4,7 +4,7 @@ There are a few ways that you can utilize the Fulcrum UI CSS utilities in your a
 
 ## **Option 1: Everything but the kitchen sink**
 
-With this option you are able to leverage the full power of Fulcrum UI's CSS utilities! To use this method you would simply include the prebuilt minified stylesheet:
+With this option you are able to leverage the full power of Fulcrum UI's CSS utilities! To use this method you would simply include the pre-compiled minified stylesheet:
 
 ```scss
 // for projects using Dart Sass
@@ -16,7 +16,7 @@ With this option you are able to leverage the full power of Fulcrum UI's CSS uti
 @import '<path-to-node_modules>/@fulcrumui/css-utils/dist/fulcrum.min.css';
 ```
 
-Once you have included the minified CSS utils stylesheet in your project, you can begin to leverage the entire Fulcrum UI CSS utils library and all of it's modules.
+Once you have included the minified Fulcrum UI CSS Utilities stylesheet in your project, you can begin to leverage the entire Fulcrum UI CSS Utilities library and all of it's modules.
 
 This is by far the easiest way to include Fulcrum UI in your development. If you need more granular control, or if you would like to only use a few modules see the other options below.
 

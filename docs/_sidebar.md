@@ -34,9 +34,9 @@
 
 - Configurations
   - [How to configure your fulcrum UI CSS utilities](configuring.md)
-  - [Configurable Modules](configurable-modules.md)
+  - Configurable Modules
     - [Font Size](font-size-configuration.md)
-    - [Layout Grid](layout-grid-configuration.md)
+    - [Grid Layout](layout-grid-configuration.md)
     - [Breakpoints](breakpoints-configuration.md)
     - [Margin](margin-configuration.md)
     - [Padding](padding-configuration.md)
