@@ -1,3 +1,16 @@
+# 1.0.0-beta2 (2020-04-21)
+
+## BREAKING CHANGES
+
+- Removed the following modules from the pre-compiled stylesheet. These have been removed in favor of the Keyword Sizes Module. This aims at keeping page & component rhythm consistent
+  - Margin Module
+  - Padding Module
+  - Spacers Module
+
+## Features
+
+- Added accessibility-contrast module and docs
+
 # 1.0.0-beta1 (2020-04-18)
 
 ## Bug Fixes
@@ -12,7 +25,6 @@
 - CHANGELOG cleanup to only represent the `@fulcrumui/css-utils` library and remove the `fulcrum-css` legacy library
 
 # 1.0.0-beta0 (2020-04-05)
-<!-- write release notes -->
 
 ## Breaking Changes
 
