@@ -1,6 +1,6 @@
 {
   "name": "@fulcrumui/css-utils",
-  "version": "1.0.0-beta1",
+  "version": "1.0.0-beta2",
   "description": "A CSS utility set used to easily adjust shared/common styles on UI components by adding some simple markup",
   "main": "fulcrum.min.css",
   "scripts": {
